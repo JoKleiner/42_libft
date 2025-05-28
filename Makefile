@@ -51,14 +51,14 @@ clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
 		printf "Clean $(NAME)... "; \
 		rm -rf $(OBJ_DIR); \
-		printf "\033[0;31mCleaned.\033[0m\n"; \
+		printf "\033[0;31mcleaned.\033[0m\n"; \
 	fi
 
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 		printf "Remove $(NAME)... "; \
 		rm -f $(NAME); \
-		printf "\033[0;31mRemoved.\033[0m\n"; \
+		printf "\033[0;31mremoved.\033[0m\n"; \
 	fi
 
 re: fclean all
