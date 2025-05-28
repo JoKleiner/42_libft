@@ -6,7 +6,7 @@ This repository is intended to deepen my understanding of how some standard func
 **Below you can see how you can integrate the library into your projects.**
 <br/><br/>
 
-**<ins>List of all 43 included functions:</ins>**
+**<ins>List of all included functions:</ins>**
 <br/><br/>
 **Input/Output Functions:**
 - **ft_printf:**        _Prints data to standard output._
@@ -40,17 +40,18 @@ This repository is intended to deepen my understanding of how some standard func
 - **ft_strlen.c:**      _Returns the length of a string._
 - **ft_strdup.c:**      _Duplicates a string in a newly allocated memory block._
 - **ft_strndup.c:**     _Duplicates n characters of a string in a newly allocated memory block._
+- **ft_strjoin_free.c:** _Concatenates two strings into a new string and freed the first string._
 - **ft_strjoin.c:**     _Concatenates two strings into a new string._
 - **ft_strlcpy.c:**     _Copies a string to a destination buffer with size limit._
 - **ft_split.c:**       _Splits a string into substrings using a delimiter._
-- **ft_putstr_rev**     _Writes a string in revers._
+- **ft_putstr_fd.c:**	_Writes a string._
+- **ft_putstr_rev:**     _Writes a string in revers._
 <br/><br/>
 
 **Further Functions:**
-- **ft_putchar.c:**  	_Writes a single character._
-- **ft_putendl.c:**  	_Writes a string followed by a newline._
-- **ft_putnbr.c:**   	_Writes an integer as a string._
-- **ft_putstr.c:**   	_Writes a string._
+- **ft_putchar_fd.c:**  _Writes a single character._
+- **ft_putendl_fd.c:**  _Writes a string followed by a newline._
+- **ft_putnbr_fd.c:**   _Writes an integer as a string._
 - **ft_isalnum.c:**     _Checks if a character is alphanumeric (letter or digit)._
 - **ft_isalpha.c:**     _Checks if a character is an alphabetic letter._
 - **ft_isascii.c:**     _Checks if a character is part of the ASCII set._
