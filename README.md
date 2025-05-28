@@ -76,7 +76,7 @@ This repository is intended to deepen my understanding of how some standard func
 <ins>Using of the library:</ins><br/><br/>
 Clone the git into your directory.
 
-	git clone https://github.com/JoKleiner/Standart-Library.git libft
+	git clone https://github.com/JoKleiner/42_libft.git libft
 
 Add the libft_header to your header file:
 
