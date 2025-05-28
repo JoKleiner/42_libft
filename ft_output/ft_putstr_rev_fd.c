@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_rev.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:33:48 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:27:04 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 11:41:11 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putstr_rev(char *str)
+int	ft_putstr_rev_fd(char *str, int fd)
 {
 	size_t	strlen;
 	int		num_ret;
@@ -21,7 +21,7 @@ int	ft_putstr_rev(char *str)
 	strlen = ft_strlen(str);
 	while (strlen > 0)
 	{
-		if (write(1, &str[--strlen], 1) == -1)
+		if (write(fd, &str[--strlen], 1) == -1)
 			return (-1);
 		num_ret++;
 	}
