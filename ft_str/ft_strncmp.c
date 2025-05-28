@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:40:31 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:51 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:47:33 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Compares two strings up to a specified number of characters.
 int	ft_strncmp(const char *src1, const char *src2, size_t num)
 {
 	size_t	i;

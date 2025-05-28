@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:36:18 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 11:34:46 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:49:05 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	inttoptr(long num, char *ptr)
 	mem_fill2(ptr, num, i);
 }
 
+// Writes an integer as a string.
 void	ft_putnbr_fd(int num, int fd)
 {
 	char	*ptr;

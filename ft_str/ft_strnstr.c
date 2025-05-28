@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:57:58 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:27:54 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:47:57 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Locates a substring within a string.
 char	*ft_strnstr(const char *src, const char *search, size_t len)
 {
 	size_t	i;

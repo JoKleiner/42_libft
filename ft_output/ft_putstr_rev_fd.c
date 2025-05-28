@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_rev.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_rev_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:33:48 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 11:41:11 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:49:25 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Writes a string in revers.
 int	ft_putstr_rev_fd(char *str, int fd)
 {
 	size_t	strlen;

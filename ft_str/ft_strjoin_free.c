@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpoplow <mpoplow@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:16:42 by mpoplow           #+#    #+#             */
-/*   Updated: 2025/03/07 15:54:10 by mpoplow          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:46:32 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-// exactly like ft_strjoin, but frees s1 before returning.
+//Concatenates two strings into a new string and freed the first string.
 char	*ft_strjoin_free(char *s1, char const *s2)
 {
 	size_t	i;

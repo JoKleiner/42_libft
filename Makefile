@@ -21,29 +21,35 @@ SRCS_CONV   = $(addprefix $(CONV_DIR)/, 	ft_atoi.c ft_itoa.c ft_toupper.c ft_tol
 SRCS_CHECK  = $(addprefix $(CHECK_DIR)/, 	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c)
 SRCS_OUTPUT = $(addprefix $(OUTPUT_DIR)/, 	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_putstr_rev_fd.c)
 
-SRCS            = $(SRCS_PRINTF) $(SRCS_GNL) $(SRCS_LIST) $(SRCS_MEMO) $(SRCS_STR) $(SRCS_CONV) $(SRCS_CHECK) $(SRCS_OUTPUT)
-OBJS            = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
-
+SRCS	= $(SRCS_PRINTF) $(SRCS_GNL) $(SRCS_LIST) $(SRCS_MEMO) $(SRCS_STR) $(SRCS_CONV) $(SRCS_CHECK) $(SRCS_OUTPUT)
+OBJS	= $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+TOTAL	= $(words $(SRCS))
+COUNT	= 0
 
 all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	@printf "Objects libft... \033[0;32mcreated\033[0m\n"
+	@printf "\033[1A\033[2KCreate $(NAME)... "
 	@ar rcs $(NAME) $(OBJS)
-	@printf "\033[0;32m$(NAME) successfully built!\033[0m\n"
+	@printf "\033[0;32mcreated\033[0m\n"
 
 
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
+	@$(eval COUNT := $(shell echo $$(($(COUNT)+1))))
+	@if [ $(COUNT) -eq 1 ]; then \
+		printf "\n"; \
+	fi
+	@printf "\033[1A\033[2KCompilen $< \t ($(COUNT)/$(TOTAL))\n";
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 
 clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
-		printf "Remove $(NAME) o-files... "; \
+		printf "Clean $(NAME)... "; \
 		rm -rf $(OBJ_DIR); \
-		printf "\033[0;31mRemoved.\033[0m\n"; \
+		printf "\033[0;31mCleaned.\033[0m\n"; \
 	fi
 
 fclean: clean

@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:01:27 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 12:31:32 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:50:26 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ char				*expand_line(char **line, char *buffer, int i);
 char				*init_temp(char *temp, char **line, char **buffer);
 void				free_str(char **str);
 
+
 // Memory Functionos
+
 void				ft_bzero(void *str, size_t num);
 void				*ft_calloc(size_t num, size_t size);
 void				*ft_memset(void *str, int cha, size_t len);
@@ -56,19 +58,25 @@ void				*ft_memcpy(void *dst, const void *src, size_t num);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				ft_memfree(char **wordptr, size_t i);
 
+
 // Linked List
+
 t_list				*ft_lstnew(long number);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstclear(t_list **lst);
 
+
 // Convert Functions
+
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 int					ft_tolower(int cha);
 int					ft_toupper(int cha);
 
+
 // String Functions
+
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *str, size_t len);
@@ -87,7 +95,9 @@ char				*ft_strrchr(const char *src, int find);
 char				*ft_strtrim(char const *str, char const *set);
 char				*ft_substr(char const *str, unsigned int start, size_t len);
 
+
 // Output Functions
+
 int					ft_putchar_fd(char cha, int fd);
 long				ft_putstr_fd(char *str, int fd);
 void				ft_putendl_fd(char *str, int fd);
@@ -95,6 +105,7 @@ void				ft_putnbr_fd(int num, int fd);
 int					ft_putstr_rev_fd(char *str, int fd);
 
 // Check Functions
+
 int					ft_isalnum(int cha);
 int					ft_isalpha(int cha);
 int					ft_isascii(int cha);
