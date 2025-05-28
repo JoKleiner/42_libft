@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:36:18 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 12:49:05 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:22:53 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,19 @@ void	inttoptr(long num, char *ptr)
 }
 
 // Writes an integer as a string.
-void	ft_putnbr_fd(int num, int fd)
+int	ft_putnbr_fd(int num, int fd)
 {
 	char	*ptr;
 	char	str[12];
 	long	numlong;
+	int 	strlen;
 
 	numlong = num;
 	ptr = str;
 	inttoptr(numlong, ptr);
-	write(fd, ptr, ft_strlen((const char *)ptr));
+	strlen = ft_strlen((const char *)ptr);
+	write(fd, ptr, strlen);
+	return(strlen);
 }
 
 // int main(void)

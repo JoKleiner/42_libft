@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:01:27 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 12:50:26 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:23:14 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ typedef struct s_list
 	long			num;
 	struct s_list	*next;
 	struct s_list	*prev;
+	int				index;
+	int				push_cost;
+	int				switch_case;
 }					t_list;
 
 // ft_print
@@ -101,7 +104,7 @@ char				*ft_substr(char const *str, unsigned int start, size_t len);
 int					ft_putchar_fd(char cha, int fd);
 long				ft_putstr_fd(char *str, int fd);
 void				ft_putendl_fd(char *str, int fd);
-void				ft_putnbr_fd(int num, int fd);
+int					ft_putnbr_fd(int num, int fd);
 int					ft_putstr_rev_fd(char *str, int fd);
 
 // Check Functions
